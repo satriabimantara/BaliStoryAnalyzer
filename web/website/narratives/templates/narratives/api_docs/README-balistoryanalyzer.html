@@ -125,8 +125,7 @@ This feature can be used to preprocess and prepare your new raw balinese text in
 -	<em><strong>OBJ</strong></em>: nominal and pronoun phrase that relate to individuals or things that carry out or receive actions without mentioning the proper nouns (e.g <em>memene</em> or his/her mom, <em>dagang nasine ento</em> or that rice seller, <em>pisagane ento</em> or that neighbor, etc)<br>
 -	<em><strong>ADJ</strong></em>: character names are based on certain characteristics, traits, or circumstances (e.g <em>I Belog</em> or the foolish, <em>I Jemet</em> or the diligent person, <em>I Buta</em> or the blind man, etc).<br>
 -	<em><strong>O</strong></em>: all words/tokens that not recognized as the five entities above will be labelled as others (O)</p>
-<pre><code>We use BIO (begin-inside-outside) format to label each words in sequences of words with each corresponding entity. For instance, _I Pekak Dukuh ajak cucune lakar ngejuk I Lutung_ will labelled as _I/**B-PNAME** Pekak/**I-PNAME** Dukuh/**I_PNAME** ajak/**O** cucune/**B-OBJ** lakar/**O** ngejuk/**O** I/**B-ANM** Lutung/**I-ANM** will have three characters named _I Pekak Dukuh_ as PNAME, _cucune_ as OBJ, and _I Lutung_ as ANM.
-</code></pre>
+<p>We use BIO (begin-inside-outside) format to label each words in sequences of words with each corresponding entity. For instance, <em>I Pekak Dukuh ajak cucune lakar ngejuk I Lutung</em> will labelled as _I/<strong>B-PNAME</strong> Pekak/<strong>I-PNAME</strong> Dukuh/<strong>I_PNAME</strong> ajak/<strong>O</strong> cucune/<strong>B-OBJ</strong> lakar/<strong>O</strong> ngejuk/<strong>O</strong> I/<strong>B-ANM</strong> Lutung/<strong>I-ANM</strong> will have three characters named <em>I Pekak Dukuh</em> as PNAME, <em>cucune</em> as OBJ, and <em>I Lutung</em> as ANM.</p>
 <ul>
 <li>
 <p><strong>Module (3)</strong>: Alias Clustering<br>
@@ -584,8 +583,8 @@ total_characters, identified_characters = pretrained_model.extract_predicted_cha
     y_pred=y_pred).values()
 </code></pre>
 <p><img src="readme_preview/contoh_hasil_identifikasi_tokoh.png" alt="Character identification example results"></p>
-<h3 id="utilise_provided_pretrianed_charne_model">How to utilize the provided pretrained character NER models?</h3><h3>
-</h3><blockquote>
+<h3 id="utilise_provided_pretrianed_charne_model">How to utilize the provided pretrained character NER models?</h3>
+<blockquote>
 <p>Please extract the zip folder (<strong>pretrained-models.zip</strong>) first</p>
 </blockquote>
 <ul>

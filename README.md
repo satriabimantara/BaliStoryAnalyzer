@@ -78,7 +78,7 @@ This feature can be used to recognize any Balinese character named entity appear
 	-	***ADJ***: character names are based on certain characteristics, traits, or circumstances (e.g _I Belog_ or the foolish, _I Jemet_ or the diligent person, _I Buta_ or the blind man, etc).
 	-	***O***: all words/tokens that not recognized as the five entities above will be labelled as others (O)
 	
-	We use BIO (begin-inside-outside) format to label each words in sequences of words with each corresponding entity. For instance, _I Pekak Dukuh ajak cucune lakar ngejuk I Lutung_ will labelled as _I/**B-PNAME** Pekak/**I-PNAME** Dukuh/**I_PNAME** ajak/**O** cucune/**B-OBJ** lakar/**O** ngejuk/**O** I/**B-ANM** Lutung/**I-ANM** will have three characters named _I Pekak Dukuh_ as PNAME, _cucune_ as OBJ, and _I Lutung_ as ANM.
+We use BIO (begin-inside-outside) format to label each words in sequences of words with each corresponding entity. For instance, _I Pekak Dukuh ajak cucune lakar ngejuk I Lutung_ will labelled as _I/**B-PNAME** Pekak/**I-PNAME** Dukuh/**I_PNAME** ajak/**O** cucune/**B-OBJ** lakar/**O** ngejuk/**O** I/**B-ANM** Lutung/**I-ANM** will have three characters named _I Pekak Dukuh_ as PNAME, _cucune_ as OBJ, and _I Lutung_ as ANM.
 
 - **Module (3)**: Alias Clustering
  The Balinese story writer often use different aliases to call the same character entity. Therefore this module provides feature for grouping the same character entity with various aliases into the same group. Based on that problem, alias clustering (some papers called it with alias resolution or named entity linking) is a cruciall steps as part of the character identification process.
@@ -512,7 +512,7 @@ total_characters, identified_characters = pretrained_model.extract_predicted_cha
 ```
 ![Character identification example results](readme_preview/contoh_hasil_identifikasi_tokoh.png)
 
-<h3 id='utilise_provided_pretrianed_charne_model'>How to utilize the provided pretrained character NER models?<h3/>
+<h3 id='utilise_provided_pretrianed_charne_model'>How to utilize the provided pretrained character NER models?</h3>
 
 > Please extract the zip folder (<strong>pretrained-models.zip</strong>) first
 - We provide our five pretrained character identification models in  **pretrained-models/character-identification**  folder in pickle (<strong>.pkl</strong> format. You can choose one of them because the steps to identify and extract from all pretrained character identification models were similar. The difference is the model/algorithm behind them.
