@@ -1,0 +1,14 @@
+/* Custom CSS */
+.custom-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da; /* Add a border */
+  border-radius: 5px; /* Add border radius */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add box shadow effect */
+  transition: box-shadow 0.3s ease; /* Add transition effect for box shadow */
+}
+
+.custom-textarea:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Change box shadow on focus */
+}

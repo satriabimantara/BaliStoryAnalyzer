@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top" id='navbar'>
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'narratives:index' %}">BaliStoryAnalyzer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'narratives:index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'narratives:api_docs_index' %}">API Documentation</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarFeatures" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Features
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarFeatures">
+              <a class="dropdown-item" href="{% url 'narratives:chars_identify' %}">Character Identification</a>
+              <a class="dropdown-item" href="{% url 'narratives:alias_clustering' %}">Alias Clustering</a>
+              <a class="dropdown-item" href="{% url 'narratives:chars_classify' %}">Character Classification</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>

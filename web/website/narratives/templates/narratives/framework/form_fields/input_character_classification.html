@@ -1,0 +1,28 @@
+<div class="form-row">
+    <div class="col-lg-7">
+        <label for="input_chars_classification_model">Pretrained Character Classification Models</label>
+        <select class="form-control" id="input_chars_classification_model" name='input_chars_classification_model' required>
+        <option value=''>--- select model ---</option>
+        {% for key, model_classifier in character_classification_models.items %}
+            <option value='{{ key }}' 
+            {% ifequal request.POST.input_chars_classification_model key  %} 
+            selected
+            {% endifequal %}
+            >{{model_classifier}}</option>
+        {% endfor %}
+        </select>
+    </div>
+    <div class="col-lg-5">
+        <label for="input_chars_classification_features">Choose your text features</label>
+        <select class="form-control" id="input_chars_classification_features" name='input_chars_classification_features' required>
+        <option value=''>--- select features ---</option>
+        {% for key, text_features in chararacters_classification_features.items %}
+            <option value='{{ key }}' 
+            {% ifequal request.POST.input_chars_classification_features key  %} 
+            selected
+            {% endifequal %}
+            >{{text_features}}</option>
+        {% endfor %}
+        </select>
+    </div>
+</div>

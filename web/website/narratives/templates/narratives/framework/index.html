@@ -1,0 +1,58 @@
+{% extends "narratives/base.html" %}
+
+
+{% block content %}
+<h1 class='h1-text-heading'>{{ heading }}</h1>
+<hr class="header-divider">
+
+
+{% if messages %}
+{% for message in messages %}
+    
+<div class="alert alert-success">
+    <a class="close" href="#" data-dismiss="alert">×</a>
+       {{ message }}
+</div>
+
+{% endfor %}
+{% endif %}
+  
+{% if flag_results %}
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{flag_results.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ flag_results.pretrained_model_name }}</h6>
+      <ul class="list-group list-group-flush">
+        {% block results %}
+        {% endblock results %}
+      </ul>
+    </div>
+</div>
+<hr class="header-divider">
+{% endif %}
+
+<div class="mb-5">
+    <h2 class='h2-text-heading'>{{ sub_heading }}</h2>
+    {% block form_child_content %}
+    <form 
+    id="form-input-character-classification" 
+    class="form-horizontal form-label-left" 
+    method='post'>
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-lg-7">
+          {% include 'narratives/framework/form_fields/input_character_identification.html' %}
+        </div>
+        <div class="col-lg-5">
+          {% include 'narratives/framework/form_fields/input_alias_clustering.html' %}
+        </div>
+      </div>
+      {% include 'narratives/framework/form_fields/input_character_classification.html' %}
+      <hr class="header-divider">
+      {% include 'narratives/framework/form_fields/input_story_text.html' %}
+      {% include 'narratives/framework/form_fields/btn_submit.html' %}
+    </form>
+    {% endblock form_child_content %}
+</div>
+{% endblock content %}
+    

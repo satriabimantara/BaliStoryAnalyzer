@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label for="input_alias_clustering_pairwise">Rule-based Alias Clustering</label>
+    <select class="form-control" id="input_alias_clustering_pairwise" name='input_alias_clustering_pairwise' required>
+      <option value=''>--- select pairwise distance ---</option>
+      {% for value, option_name in pairwise_distance_algorithms.items %}
+        <option value='{{ value }}' 
+        {% ifequal request.POST.input_alias_clustering_pairwise value  %} 
+          selected
+        {% endifequal %}
+          >{{option_name}}
+        </option>
+      {% endfor %}
+    </select>
+</div>

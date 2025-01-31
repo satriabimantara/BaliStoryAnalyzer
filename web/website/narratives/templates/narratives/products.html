@@ -1,0 +1,50 @@
+{% load static %}
+<!-- Three columns of text below the carousel -->
+<div class="row">
+    <div class="col-lg-4">
+        <img 
+        src="{% static '/img/products/products1.jpg' %}" 
+        alt="Character Identification image"
+        class="bd-placeholder-img rounded-circle"
+        width="140" 
+        height="140"
+        focusable="false"
+        role="img"
+        preserveAspectRatio="xMidYMid slice"
+        >
+        <h2>Character Identification</h2>
+        <p>This feature can be used to recognize any Balinese character named entity appearance in text segment. Our model can recognize five types of entity that can be a character in a Balinese story text and identify the character names</p>
+        <p><a class="btn btn-secondary" href="{% url 'narratives:chars_identify' %}" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img 
+        src="{% static '/img/products/products2.jpg' %}" 
+        alt="Alias Clustering image"
+        class="bd-placeholder-img rounded-circle"
+        width="140" 
+        height="140"
+        focusable="false"
+        role="img"
+        preserveAspectRatio="xMidYMid slice"
+        >
+        <h2>Alias Clustering</h2>
+        <p> The Balinese story writer often use different aliases to call the same character entity. Therefore this module provides feature for grouping the same character entity with various aliases into the same group. </p>
+        <p><a class="btn btn-secondary" href="{% url 'narratives:alias_clustering' %}" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img 
+        src="{% static '/img/products/products3.jpg' %}" 
+        alt="Role Classification image"
+        class="bd-placeholder-img rounded-circle"
+        width="140" 
+        height="140"
+        focusable="false"
+        role="img"
+        preserveAspectRatio="xMidYMid slice"
+        >
+        <h2>Role Classification</h2>
+        <p>We develop a simple procedure that can classify the character group into protagonist or antagonist with several text features. 
+            We provide lexicon-based and word vector feature extractor to extract the relevant features from each character group.</p>
+        <p><a class="btn btn-secondary" href="{% url 'narratives:framework' %}" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
