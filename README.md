@@ -1,11 +1,20 @@
 ﻿<h1 id='BaliStoryAnalyzer'>BaliStoryAnalyzer v1.0</h1>
 
+[![DOI](https://zenodo.org/badge/925191249.svg)](https://doi.org/10.5281/zenodo.14808602)
+
 The first packcage for Balinese story text analysis tasks developed using Python, including but not limited to:
 - Character named entity recognition
 - Character identification
 - Alias Clustering
 - Character Classification (protagonist vs antagonist)
 ***
+
+<h1 id='citation'>Citation</h1>
+
+If you find this project useful, please cite this github page and the following paper:
+1. Bimantara, I. M. S., Purwitasari, D., Er, N. A. S., & Natha, P. G. S. (2024). Balinese story texts dataset for narrative text analyses. _Data in Brief_, _56_, 110781.
+2. Bimantara, I. M. S., Sanjaya ER, N. A., & Purwitasari, D. (2023, November). Character Entity Recognition Using Hybrid Binary-Particle Swarm Optimization and Conditional Random Field on Balinese Folklore Text. In _International Conference on Information Integration and Web Intelligence_ (pp. 128-133). Cham: Springer Nature Switzerland.
+3. I Made Satria Bimantara, Purwitasari, D., & ER, N. A. S. (2025). A python text mining package for Balinese narrative text understanding. In Character Entity Recognition Using Hybrid Binary-Particle Swarm Optimization and Conditional Random Field on Balinese Folklore Text (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14808603
 
 <h1 id='developer_authors'>Developers and Authors</h1>
 
@@ -978,11 +987,6 @@ python manage.py runserver
 ```
 5. Now you can explore our web interface for narrative text analysis (character NER and identification, alias clustering, and character classification)
 
-<h1 id='citation'>Citation</h1>
-
-If you find this project useful, please cite this github page and the following paper:
-1. Bimantara, I. M. S., Purwitasari, D., Er, N. A. S., & Natha, P. G. S. (2024). Balinese story texts dataset for narrative text analyses. _Data in Brief_, _56_, 110781.
-2. Bimantara, I. M. S., Sanjaya ER, N. A., & Purwitasari, D. (2023, November). Character Entity Recognition Using Hybrid Binary-Particle Swarm Optimization and Conditional Random Field on Balinese Folklore Text. In _International Conference on Information Integration and Web Intelligence_ (pp. 128-133). Cham: Springer Nature Switzerland.
 
 <h1 id='contribution'>Contribution</h1>
 
